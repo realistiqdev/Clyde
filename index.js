@@ -52,6 +52,9 @@ client.on('guildMemberAdd', member => {
         message.channel.send(value);
     });
   }
+  if (message.contains("/rank")) {
+	  let role = member.guild.roles.find('name', 'Member');
+	  member.removeRole(role);
   }
 
 });
