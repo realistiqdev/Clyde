@@ -29,7 +29,7 @@ client.on("message", async message => {
   }
 });
 
-  if(message.member.hasPermissions("ADMINISTRATOR") || message.member.roles.find("name", "Tech-Support")) {
+  if(message.member.hasPermissions("ADMINISTRATOR") || message.member.roles.find("name", "Coder")) {
     const PREFIX = ">";
     const args = message.content.split(/ +/g);
     const command = args.shift().toLowerCase();
