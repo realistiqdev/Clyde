@@ -29,6 +29,11 @@ client.on("message", async message => {
   }
 });
 
+client.on('guildMemberAdd', member => {
+  var role = member.guild.roles.find('name', 'Member');
+  member.addRole(role);
+});
+
   if(message.member.hasPermission("ADMINISTRATOR") || message.member.roles.find("name", "Coder")) {
     const PREFIX = ">";
     const args = message.content.split(/ +/g);
