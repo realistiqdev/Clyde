@@ -29,11 +29,6 @@ client.on("message", async message => {
   }
 });
 
-client.on('guildMemberAdd', member => {
-  let role = member.guild.roles.find('name', 'Member');
-  member.addRole(role);
-});
-
   if(message.member.hasPermissions("ADMINISTRATOR") || message.member.roles.find("name", "Coder")) {
     const PREFIX = ">";
     const args = message.content.split(/ +/g);
@@ -56,7 +51,12 @@ client.on('guildMemberAdd', member => {
 	  let role = member.guild.roles.find('name', 'Member');
 	  member.removeRole(role);
   }
+  }
+});
 
+client.on('guildMemberAdd', member => {
+  let role = member.guild.roles.find('name', 'Member');
+  member.addRole(role);
 });
 
 client.login(process.env.BOT_TOKEN);
