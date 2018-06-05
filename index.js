@@ -30,7 +30,7 @@ client.on("message", async message => {
 });
 
 client.on('guildMemberAdd', member => {
-  var role = member.guild.roles.find('name', 'Member');
+  let role = member.guild.roles.find('name', 'Member');
   member.addRole(role);
 });
 
