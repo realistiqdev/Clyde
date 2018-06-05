@@ -42,6 +42,9 @@ client.on("message", async message => {
       let cdchannel = message.channel.id;
       channels.delete(cdchannel);
       message.channel.send("Disabled cooldown in this channel.");
+    } else if (command === ">cdl"){
+      channels.forEach(function(value)){
+        message.channel.send(value);
     }
   }
 
