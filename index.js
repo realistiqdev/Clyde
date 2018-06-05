@@ -34,7 +34,7 @@ client.on('guildMemberAdd', member => {
   member.addRole(role);
 });
 
-  if(message.member.hasPermission("ADMINISTRATOR") || message.member.roles.find("name", "Coder")) {
+  if(message.member.hasPermissions("ADMINISTRATOR") || message.member.roles.find("name", "Coder")) {
     const PREFIX = ">";
     const args = message.content.split(/ +/g);
     const command = args.shift().toLowerCase();
